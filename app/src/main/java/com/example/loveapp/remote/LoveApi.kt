@@ -1,7 +1,6 @@
-package com.example
+package com.example.loveapp.remote
 
-import android.telecom.Call
-import com.example.loveapp.LoveModel
+import com.example.loveapp.remote.LoveModel
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query

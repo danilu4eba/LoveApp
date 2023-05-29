@@ -1,4 +1,4 @@
-package com.example.loveapp
+package com.example.loveapp.remote
 
 data class LoveModel(
     val fname: String,

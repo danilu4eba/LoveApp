@@ -1,8 +1,9 @@
-package com.example.loveapp
+package com.example.loveapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import com.example.loveapp.R
 import com.example.loveapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
