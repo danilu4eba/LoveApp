@@ -2,23 +2,24 @@ package com.example.loveapp
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.example.loveapp.remote.LoveModel
-import com.example.loveapp.remote.RetrofitService
+import com.example.loveapp.data.remote.LoveApi
+import com.example.loveapp.data.remote.LoveModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class Repository {
-    fun getLoveMutableData( firstname: String, secondname:String): MutableLiveData<LoveModel> {
+class Repository @Inject constructor(private val api: LoveApi) {
+    fun getLoveMutableData(firstname: String, secondname: String): MutableLiveData<LoveModel> {
         val liveData = MutableLiveData<LoveModel>()
-        RetrofitService().api.getPercentage(firstname, secondname).enqueue(object : Callback<LoveModel>{
+        api.getPercentage(firstname, secondname).enqueue(object : Callback<LoveModel> {
             override fun onResponse(call: Call<LoveModel>, response: Response<LoveModel>) {
-               liveData.postValue(response.body())
+                liveData.postValue(response.body())
 
             }
 
             override fun onFailure(call: Call<LoveModel>, t: Throwable) {
-                Log.e("koko", "onFailure: ${t.message}", )
+                Log.e("koko", "onFailure: ${t.message}")
             }
 
         })

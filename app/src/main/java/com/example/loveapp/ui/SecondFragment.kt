@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.example.loveapp.data.remote.LoveModel
 import com.example.loveapp.databinding.FragmentSecondBinding
-import com.example.loveapp.remote.LoveModel
 
 class SecondFragment : Fragment() {
     lateinit var binding: FragmentSecondBinding

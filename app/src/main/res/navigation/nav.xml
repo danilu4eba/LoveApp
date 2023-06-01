@@ -17,5 +17,10 @@
             android:id="@+id/action_firstFragment_to_secondFragment3"
             app:destination="@id/secondFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.loveapp.ui.onBoard.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
 
 </navigation>

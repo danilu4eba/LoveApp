@@ -11,11 +11,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.loveapp.LoveViewModel
 import com.example.loveapp.R
-import com.example.loveapp.Repository
 import com.example.loveapp.databinding.FragmentFirstBinding
-import com.example.loveapp.remote.LoveModel as LoveModel1
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class FirstFragment : Fragment() {
     private lateinit var binding: FragmentFirstBinding
     private val ViewModel: LoveViewModel by viewModels()
@@ -37,10 +36,6 @@ class FirstFragment : Fragment() {
     private fun initClickers() {
 
         with(binding) {
-            Repository().getLoveMutableData(
-                etFirst.text.toString(),
-                etSecond.text.toString()
-            )
             btnCalc.setOnClickListener {
                 ViewModel.getLiveLove(
                     etFirst.text.toString(),
@@ -48,7 +43,7 @@ class FirstFragment : Fragment() {
                 ).observe(viewLifecycleOwner) {
                     Log.e("koko", "initClickers: $it")
 
-                   findNavController().navigate(R.id.secondFragment, bundleOf("result" to it))
+                    findNavController().navigate(R.id.secondFragment, bundleOf("result" to it))
                 }
 //            Repository().getLoveMutableData( etFirst.text.toString(),
 //                etSecond.text.toString())

@@ -1,8 +1,8 @@
-package com.example.loveapp.remote
+package com.example.loveapp.data.remote
 
 data class LoveModel(
     val fname: String,
     val sname: String,
     val percentage: String,
     val result: String,
-):java.io.Serializable
+) : java.io.Serializable
