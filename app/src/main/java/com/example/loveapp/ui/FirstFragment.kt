@@ -9,8 +9,10 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.loveapp.App
 import com.example.loveapp.LoveViewModel
 import com.example.loveapp.R
+import com.example.loveapp.data.remote.LoveModel
 import com.example.loveapp.databinding.FragmentFirstBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -50,6 +52,7 @@ class FirstFragment : Fragment() {
                     Log.e("koko", "initClickers: $it")
 
                     findNavController().navigate(R.id.secondFragment, bundleOf("result" to it))
+                    App.appDatabase.getDao().insert(it)
                 }
 //            Repository().getLoveMutableData( etFirst.text.toString(),
 //                etSecond.text.toString())

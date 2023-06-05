@@ -17,14 +17,7 @@
             android:textColor="@color/black"
             android:textSize="26sp" />
 
-        <ImageView
-            android:id="@+id/hHeard"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="46dp"
-            />
+
 
         <TextView
             android:id="@+id/tvF_secondName"
@@ -44,14 +37,7 @@
             android:textColor="@color/black"
             android:textSize="44sp" />
 
-        <ImageView
-            android:id="@+id/iv_procent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="190dp"
-            android:padding="12dp"
 
-            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/tv_percentage"
