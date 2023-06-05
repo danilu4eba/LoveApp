@@ -31,6 +31,12 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initClickers()
+        clickHistory()
+    }
+    private fun clickHistory() {
+        binding.btnHistory.setOnClickListener {
+            findNavController().navigate(R.id.historyFragment)
+        }
     }
 
     private fun initClickers() {

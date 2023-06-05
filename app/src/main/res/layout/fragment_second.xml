@@ -22,5 +22,10 @@
        android:text="kokoko"
        android:textSize="40sp"
        />
+    <Button
+        android:id="@+id/btnTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

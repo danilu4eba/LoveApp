@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.loveapp.data.remote.LoveModel
 import com.example.loveapp.databinding.FragmentSecondBinding
 
@@ -21,8 +22,18 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         result()
+        tryAgain()
 
 
+    }
+
+    private fun tryAgain() {
+        binding.btnTryAgain.setOnClickListener {
+            val bundle = Bundle().apply {
+                putBoolean("clearEditText", true)
+            }
+            findNavController().navigateUp()
+        }
     }
 
 
