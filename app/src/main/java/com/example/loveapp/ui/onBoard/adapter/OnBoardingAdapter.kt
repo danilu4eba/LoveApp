@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import coil.load
+import com.example.loveapp.R
 import com.example.loveapp.databinding.ItemOnboardBinding
 import com.example.loveapp.ui.onBoard.OnBoardModel
 
@@ -15,26 +16,23 @@ class OnBoardingAdapter(private val onClick: (OnBoardModel) -> Unit) :
         OnBoardModel(
             title = "Title 1",
             desc = "Description 1",
-            image = "https://cdn0.iconfinder.com/data/icons/urban-tribes-people-rounded/110/Geek-512.png"
+            image = R.raw.stumble
 
         ),
         OnBoardModel(
             title = "Title 2",
             desc = "Description 2",
-            image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-hvfPNnkZrEU2dLqNcez61LI5svOZhAJVGw&usqp=CAU"
-
+            image = R.raw.stumble
         ),
         OnBoardModel(
             title = "Title 3",
             desc = "Description 3",
-            image = "https://img.freepik.com/premium-vector/geek-logo-icon-vector-design-illustration_487414-1224.jpg?w=2000"
-
+            image = R.raw.stumble
         ),
         OnBoardModel(
             title = "Title 2",
             desc = "Description 2",
-            image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-hvfPNnkZrEU2dLqNcez61LI5svOZhAJVGw&usqp=CAU"
-
+            image = R.raw.stumble
         )
     )
 

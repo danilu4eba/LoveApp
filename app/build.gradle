@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id "kotlin-kapt"
     id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -69,4 +70,6 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
     kapt "androidx.room:room-compiler:$room_version"
+
+    implementation 'com.airbnb.android:lottie:5.2.0'
 }

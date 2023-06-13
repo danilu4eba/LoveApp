@@ -44,4 +44,3 @@ class OnBoardingFragment : Fragment() {
         pref.saveUserSeen()
     }
 }
-
