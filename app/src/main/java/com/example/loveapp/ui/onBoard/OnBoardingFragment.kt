@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.loveapp.R
 import com.example.loveapp.data.local.Pref
 import com.example.loveapp.databinding.FragmentOnBoardingBinding
 import com.example.loveapp.ui.onBoard.adapter.OnBoardingAdapter
@@ -44,3 +45,4 @@ class OnBoardingFragment : Fragment() {
         pref.saveUserSeen()
     }
 }
+

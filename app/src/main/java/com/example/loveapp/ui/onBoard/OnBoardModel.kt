@@ -1,8 +1,7 @@
 package com.example.loveapp.ui.onBoard
 
 data class OnBoardModel(
-    val title: String,
-    val desc: String,
-    val image: Int? = null
-
+    var title: String? = null,
+    var decs: String? = null,
+    var image: Int
 )
